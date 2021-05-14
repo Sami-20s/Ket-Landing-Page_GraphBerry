@@ -1,0 +1,55 @@
+.modern-design {
+    position: absolute;
+    width: 100%;
+    height: 714px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blackHeader;
+    z-index: 10;
+    &__wrapper {
+        width: $width;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        padding-top: 100px;
+        background: $blackHeader;
+        img {
+            margin-top: 100px;
+        }
+        &__heading {
+            h2 {
+                position: relative;
+                text-align: center;
+                color: #fff;
+                font-size: $large;
+                font-family: $font;
+                font-weight: $regular;
+                margin-bottom: 50px;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 170px;
+                    height: 2px;
+                    position: absolute;
+                    top: 80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: $lightBlue;
+                }
+            }
+            p {
+                transform: translateY(15px);
+                max-width: 746px;
+                text-align: center;
+                color: #fff;
+                font-size: $extraSmall;
+                font-family: $font;
+                font-weight: $light;
+                line-height: 2.077;
+            }
+        }
+    }
+}

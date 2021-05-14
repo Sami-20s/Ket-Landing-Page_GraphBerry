@@ -1,0 +1,69 @@
+.portfolio__video {
+    width: 100%;
+    height: 635px;
+    background: $blackHeader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+        width: $width;
+        padding: 190px 200px;
+        height: 100%;
+        .video__shape {
+            &__circle {
+                position: relative;
+                width: 44px;
+                height: 44px;
+                border: solid 1px #fff;
+                border-radius: 100%;
+                left: 50%;
+                transform: translate(-50%,10px) scale(1);
+                cursor: pointer;
+                transition: transform .3s ease;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    border: 11px solid transparent;
+                    border-right-width: 0;
+                    border-left-color: #fff;
+                    border-top-width: 6px;
+                    border-bottom-width: 6px;
+                    left: calc(50% + 1px);
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                &:hover {
+                    transform: scale(1.3) translateX(-17px);
+                }
+            }   
+        }
+        h2 {
+            position: relative;
+            color: #fff;
+            font-size: $large;
+            font-family: $font;
+            font-weight: $regular;
+            text-align: center;
+            &::after {
+                width: 170px;
+                height: 3px;
+                content: "";
+                position: absolute;
+                display: block;
+                left: 50%;
+                transform: translate(-50%,30px);
+                background-color: $lightBlue;
+            }
+        }
+        p {
+            padding-top: 62px;
+            color: #fff;
+            font-size: $extraSmall;
+            font-family: $font;
+            font-weight: $light;
+            line-height: 2.077;
+            text-align: center;
+        }
+    }
+}

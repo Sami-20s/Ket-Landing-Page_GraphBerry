@@ -1,0 +1,87 @@
+.services__responsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 575px;
+    background: #f7f7f7;
+    .responsive__wrapper {
+        width: $width;
+        height: 100%;
+        padding-top: 52px;
+        background: #f7f7f7;
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            h4 {
+                position: relative;
+                padding: 20px 212px;
+                border: solid 1px $gray;
+                border-right: none;
+                color: $blackBlue;
+                font-size: $small;
+                font-family: $font;
+                font-weight: $medium;
+                &:last-child {
+                    border: solid 1px $extraLightBlue;
+                }
+                &:last-child::after {
+                    content: "";
+                    position: absolute;
+                    top: calc(78% - 1px);
+                    left: 50%;
+                    display: block;
+                    width: 15px;
+                    height: 16px;
+                    background: #f7f7f7;
+                    border: solid 1px $extraLightBlue;
+                    transform: rotate(-47deg) translateX(-50%);
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+        .des {
+            display: flex;
+            img {
+                margin-top: 85px;
+                margin-right: 85px;
+                margin-left: 140px;
+                z-index: 4;
+            }
+            &__heading{
+                margin-top: 120px;
+                h2 {
+                    color: $blackBlue;
+                    font-size: $large;
+                    font-family: $font;
+                    font-weight: $regular;
+                }
+                p {
+                    padding-top: 34px;
+                    color: $grayBlue;
+                    font-size: $small;
+                    font-family: $font;
+                    font-weight: $light;
+                    line-height: 1.8;
+                }
+                button {
+                    margin-top: 35px;
+                    padding: 20px 40px;
+                    border: solid 1px $lightBlue;
+                    background: #f7f7f7;
+                    color: $lightBlue;
+                    font-size: $small;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 0;
+                    transition: border-radius .3s ease;
+                }
+            }
+        }
+    }
+
+}

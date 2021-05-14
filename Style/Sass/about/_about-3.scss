@@ -1,0 +1,168 @@
+.about__3 {
+    position: relative;
+    width: 100%;
+    height: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blackHeader;
+    &__wrapper {
+        position: relative;
+        width: $width;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        padding-top: 90px;
+        &__shape {
+            position: relative;
+            width: 36px;
+            height: 36px;
+            transform: scale(1.2);
+            transition: transform .3s ease-out;
+            cursor: pointer;
+            .circle__border {
+                width: 100%;
+                height: 100%;
+                border: solid 2px $lightBlue;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: transparent;
+                .circle {
+                    position: relative;
+                    width: 28px;
+                    height: 28px;
+                    background: $lightBlue;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    .vertical__line {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        &__left {
+                            transform: translate(11px,4px);
+                            width: 2px;
+                            height: 9px;
+                            background: #fff;
+                            
+                        }
+                        &__right {
+                            width: 2px;
+                            height: 9px;
+                            background: #fff;
+                            transform: translate(15px,-5px);
+                        }
+                    }
+                }
+            }
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        &__heading {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            transition: transform 1s ease-in-out;
+            h3 {
+                color: transparent;
+                font-size: $med;
+                font-family: $font;
+                font-weight: $medium;
+                text-align: center;
+                transition: all .5s ease-in-out;
+            }
+            h5 {
+                padding-top: 15px;
+                color: transparent;
+                font-size: $extraSmall;
+                font-family: $font;
+                font-weight: $light;
+                text-align: center;
+                transition: all .5s ease-out .1s;
+            }
+        }
+        &__heading.open {
+            h3 {
+                color: #fff;
+            }
+            h5 {
+                color: #fff;
+            }
+        }
+        &__heading.move {
+            transform: translateX(500px);
+            h3 {
+                color: transparent;
+            }
+            h5 {
+                color: transparent;
+            }
+        }
+        &__arrow {
+            position: rlative;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            &__left {
+                position: relative;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: transparent;
+                border: solid 2px #fff;
+                border-radius: 100%;
+                cursor: pointer;
+                transform: scale(1);
+                transition: transform .3s ease-out, border-color .5s ease-out;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    border: solid 4px #fff;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(4px,-50%) rotate(-45deg);
+                }
+                &:hover {
+                    transform: scale(1.4);
+                    border-color: $lightBlue;
+                }
+            }
+            &__right {
+                position: relative;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: transparent;
+                border: solid 2px #fff;
+                border-radius: 100%;
+                cursor: pointer;
+                transform: scale(1);
+                transition: transform .3s ease-out, border-color .5s ease-out;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    border: solid 4px #fff;
+                    border-right-width: 0;
+                    border-top-width:0 ;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(8px,-50%) rotate(45deg);
+                } 
+                &:hover {
+                    transform: scale(1.4);
+                    border-color: $lightBlue;
+                }
+            }
+        }
+    }
+}
